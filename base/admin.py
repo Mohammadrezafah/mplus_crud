@@ -13,8 +13,8 @@ from easy_select2 import select2_modelform
 
 
 class BookAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-	list_display = ("title",)
-	search_fields = ('title',)
+	list_display = ("title", "author", "date_published", "number_of_page", "type_of_book")
+	search_fields = ('title', "author")
 	class Meta:
 		model = 'Book'
 
